@@ -9,7 +9,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Facebook API credentials
-access_token = 'EAAONhsmiQ2IBO9VzcumnE20NzDeTc4e9ssdqFa5cZBASYjXr53Y2AvembXoLSepsYJbxke4m9GFtRnascFLHdr0l9pAvnOauGaAkWwXtm6eUt042WpOS5WMe4b6GEnB7U7ULcKAYaa8iYTxi8PcQllZBXzUGvCzJuPDuB9ZCM5D1iKaA6LdCEZCSgde7FuAP3M2uzqixrpvIAbVaNMt9YgZDZD'
+access_token = 'EAAONhsmiQ2IBO12nGtNg1FDzug82C1CVGvRgD8mdHfljZAmQyvNIXzb9Ok8uC9oECrCyXKe3gukuAZB1wiH2A9jt7AxCCgap2N7BAQngLQvqtRh8aZC733sOVvIiyAdgQVNHJOt1UPBjIMt44IKAZBEVgjAduJUxwP11Vdb5ZAOsUN7O4QouXs47pxStFSwZDZD'
 page_id = '617619251426823'
 FacebookAdsApi.init(access_token=access_token)
 
@@ -38,9 +38,9 @@ def move_file(file_path, archive_directory):
     shutil.move(file_path, archive_directory)
 
 def send_email_notification():
-    sender_email = "your_email@gmail.com"
+    sender_email = "automate.analyze@gmail.com"
     receiver_email = "automate.analyze@gmail.com"
-    password = "your_email_password"
+    password = "Jacxvacc@8"
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "Content Folder Alert"
@@ -59,7 +59,7 @@ def send_email_notification():
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 def post_content():
-    base_dir = "C:\\Users\\amymi\\OneDrive\\Automate and Analyze with Amy\\Development\\Portfolio\\SocialMedia_Automation\\Content"
+    base_dir = "C:\\Development\\Portfolio\\SocialMedia_Automation\\Content"
     archive_dir = os.path.join(base_dir, 'archive')
     os.makedirs(archive_dir, exist_ok=True)
     
